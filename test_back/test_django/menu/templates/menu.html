@@ -1,0 +1,17 @@
+{% block menu %}
+
+<div><a href="/">Главная</a>
+    <div><a href="/food">Еда</a><details {% if open %} open="open" {% endif %}>
+            <summary></summary>
+            <div><a href="/food/ice">Мороженое</a></div>
+            <div><a href="/food/potato">Картошка</a>
+                <details {% if open_too %} open="open" {% endif %}>
+                    <summary></summary>
+                    <div><a href="/food/potato/fry">Жареная</a></div>
+            </div>
+        </details>
+    </div>
+    <div><a href="/dog">Собака</a></div>
+</div>
+
+{% endblock %}
